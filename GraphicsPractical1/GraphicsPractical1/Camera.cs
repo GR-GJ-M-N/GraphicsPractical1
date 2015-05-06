@@ -22,8 +22,7 @@ namespace GraphicsPractical1
             this.focus = camFocus;
 
             this.updateViewMatrix();
-            this.projectionMatrix = Matrix.CreatePerspectiveFieldOfView(MathHelper.PiOver4,
-            aspectRatio, 1.0f, 300.0f);
+            this.projectionMatrix = Matrix.CreatePerspectiveFieldOfView(MathHelper.PiOver4, aspectRatio, 1.0f, 300.0f);
         }
 
         private void updateViewMatrix()

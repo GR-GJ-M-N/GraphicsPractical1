@@ -30,6 +30,7 @@ namespace GraphicsPractical1
             this.loadHeightData(heightMap);
         }
 
+        //Set the height data according to the provided heigthMap texture
         private void loadHeightData(Texture2D heightMap)
         {
             this.heightData = new byte[this.width, this.height];

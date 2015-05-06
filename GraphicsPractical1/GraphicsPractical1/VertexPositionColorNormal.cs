@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace GraphicsPractical1
 {
+    //A struct to store a position, color and normal instead of just a normal
     struct VertexPositionColorNormal : IVertexType
     {
         public Vector3 Position;

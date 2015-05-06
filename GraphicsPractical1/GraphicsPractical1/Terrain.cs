@@ -33,8 +33,6 @@ namespace GraphicsPractical1
             this.setupIndices();
             this.calculateNormals();
             this.copyToBuffers(device);
-            
-            
         }
 
         private VertexPositionColorNormal[] loadVertices(HeightMap heightMap, float heightScale)
