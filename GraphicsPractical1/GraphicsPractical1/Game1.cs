@@ -44,7 +44,6 @@ namespace GraphicsPractical1
 
         protected override void LoadContent()
         {
-            //....
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             //Create the effect
@@ -82,7 +81,6 @@ namespace GraphicsPractical1
             //Rotate the terrain if left or right is pressed
             float deltaAngle = 0;
             KeyboardState kbState = Keyboard.GetState();
-
             if (kbState.IsKeyDown(Keys.Left))
                 deltaAngle += -3 * timeStep;
             if (kbState.IsKeyDown(Keys.Right))
@@ -93,25 +91,26 @@ namespace GraphicsPractical1
 
         protected override void Draw(GameTime gameTime)
         {
-            //...
             this.GraphicsDevice.RasterizerState = new RasterizerState
             {
+                //Culling off for designing
                 CullMode = CullMode.None,
+                //Fill the triangles solid so they don't look like just triangles
                 FillMode = FillMode.Solid
             };
 
             //Clear the window so the background is CornflowerBlue
             this.GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            //...
+            //Change the effect according to the properties of the camera object
             this.effect.Projection = this.camera.ProjectionMatrix;
             this.effect.View = this.camera.ViewMatrix;
 
-            //...
+            //Move the terrain to the origin
             Matrix translation = Matrix.CreateTranslation(-0.5f * this.terrain.Width, 0, 0.5f * this.terrain.Width);
             this.effect.World = translation;
 
-            //...
+            //Apply the effects
             foreach (EffectPass pass in this.effect.CurrentTechnique.Passes)
             {
                 pass.Apply();
