@@ -1,3 +1,5 @@
-Gert-Jan van Ginkel
+Gert-Jan van Ginkel		5490723
 Mehul Mistry			4255704
-Norico Groenevel		401358
+Norico Groeneveld		4301358
+
+We didn't want to hurt your eyes with our implementation of terrain coloring
