@@ -44,15 +44,6 @@ namespace GraphicsPractical1
                     int v = x + y * this.width;
                     float h = heightMap[x, y] * heightScale;
                     vertices[v].Position = new Vector3(x, h, -y);
-
-                    /*
-                    int RB = 20;
-                    int G = 20;
-
-                    int colorvalueRB = RB + (int)h * (255 - RB) / 34;
-                    int colorvalueG = G + (int)h * (255 - G) / 34;
-                    vertices[v].Color = Color.FromNonPremultiplied(colorvalueRB, 255, colorvalueRB, 255);
-                    */
                     vertices[v].Color = Color.Green;
                 }
             return vertices;
